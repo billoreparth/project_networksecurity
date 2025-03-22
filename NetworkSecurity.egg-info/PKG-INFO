@@ -1,4 +1,4 @@
-Metadata-Version: 2.1
+Metadata-Version: 2.2
 Name: NetworkSecurity
 Version: 0.0.1
 Author: Parth Billore
@@ -8,5 +8,7 @@ Requires-Dist: pandas
 Requires-Dist: numpy
 Requires-Dist: pymongo
 Requires-Dist: certifi
-Requires-Dist: pymongo[srv]==3.6
 Requires-Dist: scikit-learn
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist

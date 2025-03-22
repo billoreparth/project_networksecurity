@@ -4,4 +4,7 @@ numpy
 pymongo
 certifi
 scikit-learn
+pyaml
+dill 
+# pickle 
 # -e .
