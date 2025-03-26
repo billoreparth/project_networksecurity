@@ -7,6 +7,8 @@ from networksecurity.components.data_transformation import DataTransformation
 from networksecurity.entity.config_entity import DataIngestionConfig,DataTransformationConfig
 from networksecurity.entity.config_entity import DataValidationConfig
 from networksecurity.entity.config_entity import TrainingPipelineConfig
+from networksecurity.components.model_trainer import ModelTrainer
+from networksecurity.entity.config_entity import ModelTrainerConfig
 
 if __name__=="__main__":
     try:
@@ -25,6 +27,10 @@ if __name__=="__main__":
         data_transformation=DataTransformation(data_validation_artifact,datatransformationconfig)
         data_transformation_artifact=data_transformation.intiate_data_transformation()
         print(data_transformation_artifact)
+        logging.info("model training started")
+        model_trainer_config = ModelTrainerConfig(trainingpipelineconfig)
+        model_trainer=ModelTrainer(model_trainer_config=model_trainer_config,model_transformation_artifact=data_transformation_artifact)
+        logging.info("model training artifact created ")
 
 
         
